@@ -1,0 +1,11 @@
+<h1><%= @thought.subject %></h1>
+
+<p><%= @thought.details %></p><br />
+<p><%= @thought.sentiment %></p><br />
+<p>Instrusive? <%= @thought.intrusive ? "That's personal" : "That's one you can share" %></p><br />
+<p>Logical? <%= @thought.logical ? "Good job, Spock" : "Illogical, Captain" %></p>
+
+
+<a href="/thoughts/new">Create a new thought!</a><br />
+<a href="/thoughts/<%=@thought.id%>/edit">Edit me!</a><br />
+<a href="/thoughts">Back to the index</a>

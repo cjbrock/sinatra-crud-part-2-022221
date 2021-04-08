@@ -1,0 +1,44 @@
+<h1>Have a new thought!</h1>
+
+
+
+<form method="POST" action="/thoughts">
+    <select name="user_id">
+        <% @users.each do | user |%>
+            <option value="<%= user.id %>"><%= user.username %></option>
+        <% end %>
+    </select><br />
+
+
+    Title: <input type="text" name="subject"><br />
+
+    Details: <input type="text" name="details"><br />
+
+    <label for="sentiment">What kind of thought is it?</label>
+    <select name="sentiment" id="sentiment">
+        <option value="happy">Happy</option>
+        <option value="sad">Sad</option>
+        <option value="neutral">Neutral</option>
+    </select><br />
+
+
+    Intrusive: 
+    <input type="radio" name="intrusive" id="intrusiveChoice1" value="true">
+    <label for="intrusiveChoice1">Yes</label>
+
+    <input type="radio" name="intrusive" id="intrusiveChoice2" value="false">
+    <label for="intrusiveChoice2">No</label><br />
+
+
+
+    Logical: 
+    <input type="radio" name="logical" id="logicalChoice1" value="true">
+    <label for="logicalChoice1">Yes</label>
+
+    <input type="radio" name="logical" id="logicalChoice2" value="false">
+    <label for="logicalChoice2">No</label><br />
+    
+    
+    
+    <input type="submit">
+</form>

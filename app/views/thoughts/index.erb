@@ -1,0 +1,15 @@
+<h1> All The Thoughts Here! YAY! </h1>
+
+<ul>
+
+<% @thoughts.each do |thought| %>
+
+    <li>
+        <a href="/thoughts/<%= thought.id %>" >
+            <%= thought.subject %>
+        </a>
+    </li>
+
+<% end %>
+
+</ul>
